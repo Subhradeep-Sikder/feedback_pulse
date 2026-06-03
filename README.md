@@ -7,20 +7,20 @@
 
 ## ✨ Benefits
 
-* 🗳️ **Democratic Upvoting:** Highlights the most demanded features and improvements through community votes.
-* 🗺️ **Public Roadmap:** Keeps users engaged and informed on development stages in real-time.
-* 🛡️ **Zero Duplication:** Groups user input into single posts to avoid redundant bug and feature reports.
-* 🎛️ **Effortless Control:** Provides admins with a unified control center to transition statuses and moderate ideas.
+* 🗳️ **Upvotes:** Highlights popular requests.
+* 🗺️ **Roadmap:** Visualizes live progress in columns.
+* 🛡️ **No Spam:** Groups duplicate feedback together.
+* 🎛️ **Admin Control:** Streamlined post moderation.
 
 ---
 
 ## 📖 User Guide (How to use the app)
 
-1. 🔑 **Sign In:** Securely log in using Clerk via the top navigation bar. *(Note: The very first registered user automatically becomes the Admin).*
-2. ✍️ **Submit Ideas:** Go to **"New Feedback"** to submit feedback with a title, category, and description.
-3. 🔼 **Upvote:** Click the upvote arrow (🔼) on any feedback item to support it or click again to remove your vote.
-4. 📊 **Track Roadmap:** View the public roadmap page to check development progress.
-5. ⚙️ **Manage (Admins):** Go to the Admin Dashboard to change status badges or delete posts.
+* 🔑 **Sign In:** Log in in the navbar. *(First user automatically becomes Admin).*
+* ✍️ **Submit Ideas:** Click "New Feedback" to post a request.
+* 🔼 **Upvote:** Click the arrow next to any post to vote.
+* 📊 **Roadmap:** Track feature status on the roadmap.
+* ⚙️ **Manage (Admins):** Toggle statuses or delete posts on the Admin page.
 
 ---
 
@@ -81,7 +81,7 @@ Ensure you have the following installed on your machine:
 
 3. ⚙️ **Configure Environment Variables:**
    Copy the example environment file: `cp .env.example .env`.
-  
+   Get your credentials: [Database (Neon DB)](https://neon.tech/) | [Auth Keys (Clerk Dashboard)](https://dashboard.clerk.com/)
    
    Open the `.env` file and fill in your keys:
    ```env
@@ -98,8 +98,6 @@ Ensure you have the following installed on your machine:
    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/feedback
    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/feedback
    ```
-    Get your credentials: [Database (Neon DB)](https://neon.tech/) | [Auth Keys (Clerk Dashboard)](https://dashboard.clerk.com/)
-    
 
 4. 🗄️ **Initialize Database and Apply Migrations:**
    ```bash
