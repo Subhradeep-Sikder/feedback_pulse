@@ -1,169 +1,123 @@
 # 💡 Feedback Pulse
 
-A community-driven feedback platform where users submit feature ideas, vote on what matters most, and track product development in real-time.
 
-## 🎯 What is this?
+**Feedback Pulse** is a community-driven feedback platform that allows users to submit feature requests, vote on ideas they care about, and track development in real-time. It helps product creators listen to their community, prioritize popular requests, and share progress transparently.
 
-Feedback Pulse is a web app that lets communities influence product direction. Users can submit feature requests, upvote ideas they care about, and see exactly what's planned, in progress, or completed. Admins get a dashboard to manage feedback and update statuses. Think of it like a public product roadmap that actually listens to its users.
+---
 
-## ✨ Features
+## ✨ Benefits
 
-- 📝 **Submit Feedback** – Post feature ideas with titles, descriptions, and category tags
-- 👍 **Community Voting** – Upvote suggestions to show what the community wants most
-- 🗺️ **Public Roadmap** – See features organized by status: Under Review → Planned → In Progress → Completed
-- 🛠️ **Admin Dashboard** – Manage feedback submissions and update their status
-- 🌙 **Dark Mode** – Light and dark theme support
-- 🔐 **User Authentication** – Secure login with Clerk
-- 🏷️ **Category Filters** – Browse feedback by feature categories with vote counts
+* 🗳️ **Democratic Upvoting:** Highlights the most demanded features and improvements through community votes.
+* 🗺️ **Public Roadmap:** Keeps users engaged and informed on development stages in real-time.
+* 🛡️ **Zero Duplication:** Groups user input into single posts to avoid redundant bug and feature reports.
+* 🎛️ **Effortless Control:** Provides admins with a unified control center to transition statuses and moderate ideas.
 
-## 🛠️ Tech Stack
+---
 
-- 🎨 **Frontend:** Next.js 16, React 19, TypeScript, Tailwind CSS 4
-- 📦 **UI Components:** shadcn/ui with Radix UI
-- ⚙️ **Backend:** Next.js API Routes
-- 🗄️ **Database:** PostgreSQL + Prisma ORM
-- 🔑 **Authentication:** Clerk
-- 🧠 **Utilities:** sonner (toasts), lucide-react (icons), next-themes (dark mode)
+## 📖 User Guide (How to use the app)
 
-## 📁 Project Structure
+1. 🔑 **Sign In:** Securely log in using Clerk via the top navigation bar. *(Note: The very first registered user automatically becomes the Admin).*
+2. ✍️ **Submit Ideas:** Go to **"New Feedback"** to submit feedback with a title, category, and description.
+3. 🔼 **Upvote:** Click the upvote arrow (🔼) on any feedback item to support it or click again to remove your vote.
+4. 📊 **Track Roadmap:** View the public roadmap page to check development progress.
+5. ⚙️ **Manage (Admins):** Go to the Admin Dashboard to change status badges or delete posts.
 
-```
-feedback-fusion/
-├── app/
-│   ├── (auth)/              # Auth pages (sign-in, sign-up)
-│   ├── admin/               # Admin dashboard (protected route)
-│   ├── api/                 # API routes for feedback, votes
-│   ├── feedback/            # Community feedback page
-│   ├── feedback/new/        # Submit new feedback form
-│   ├── roadmap/             # Public product roadmap
-│   ├── layout.tsx           # Root layout with Clerk provider
-│   └── page.tsx             # Landing page
-├── components/
-│   ├── ui/                  # shadcn/ui components (buttons, cards, inputs, etc.)
-│   └── [custom components]  # Navbar, footer, feedback lists, admin table
-├── lib/
-│   ├── prisma.ts            # Prisma client instance
-│   ├── sync-user.ts         # Sync Clerk user to DB
-│   └── utils.ts             # Utility functions
-├── prisma/
-│   ├── schema.prisma        # Database models (User, Post, Vote)
-│   └── migrations/          # Database migration history
-└── public/                  # Static assets
-```
+---
 
-## 📸 Screenshots
+## 🛠️ Technologies Used
 
-### 🏠 Landing Page
-<img src="screenshot/dashboard_light_mode.png" alt="Landing Page - Light Mode" width="100%">
+* 💻 **Framework:** 
+  [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+* 🎨 **Styling & UI:** 
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
+* 🗄️ **Database & ORM:** 
+  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+  [![Prisma](https://img.shields.io/badge/Prisma-398200?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+* 🔒 **Authentication:** 
+  [![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)](https://clerk.com/)
+* 🔧 **Utilities:** 
+  [![Lucide Icons](https://img.shields.io/badge/Lucide_React-FF5E00?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
+  [![Sonner](https://img.shields.io/badge/Sonner-00D2C4?style=for-the-badge)](https://github.com/emilkowalski/sonner)
 
-### 💬 Community Feedback
-<img src="screenshot/community_feedback.png" alt="Community Feedback" width="100%">
+---
 
-### 📝 New Feedback Form
-<img src="screenshot/new_feedback_form.png" alt="Submit Feedback Form" width="100%">
+## 📸 UI Screenshots (Grid View)
 
-### 🗺️ Product Roadmap
-<img src="screenshot/product_roadmap.png" alt="Product Roadmap" width="100%">
+Here is a visual overview of Feedback Pulse’s interface:
 
-### 🎛️ Admin Dashboard
-<img src="screenshot/admin_dashboard.png" alt="Admin Dashboard" width="100%">
+| 🏠 Landing Page (Light Mode) | 🌙 Landing Page (Dark Mode) |
+|:---:|:---:|
+| <img src="screenshot/dashboard_light_mode.png" alt="Landing Page - Light Mode" width="100%"> | <img src="screenshot/dashboard_signed_dark_mode.png" alt="Landing Page - Dark Mode" width="100%"> |
+| **💬 Community Feedback Board** | **📝 New Feedback Submission Form** |
+| <img src="screenshot/community_feedback.png" alt="Community Feedback" width="100%"> | <img src="screenshot/new_feedback_form.png" alt="Submit Feedback Form" width="100%"> |
+| **🗺️ Product Roadmap Progress** | **🎛️ Admin Dashboard & Moderation** |
+| <img src="screenshot/product_roadmap.png" alt="Product Roadmap" width="100%"> | <img src="screenshot/admin_dashboard.png" alt="Admin Dashboard" width="100%"> |
 
-### 🌙 Dark Mode
-<img src="screenshot/dashboard_signed_dark_mode.png" alt="Dashboard - Dark Mode" width="100%">
+---
 
-## 🚀 Local Setup
+## 🚀 How to Set Up Locally
 
 ### 📋 Prerequisites
-- Node.js 18+ and npm
-- PostgreSQL database (local or cloud)
-- Clerk account for authentication
+Ensure you have the following installed on your machine:
+* 🟢 Node.js 18+ and npm
+* 🐘 PostgreSQL Database (local or cloud-hosted)
+* 🔑 Clerk Account (for authentication)
 
-### 📝 Steps
+### 🚀 Setup Steps
 
-1. **Clone the repository**
+1. 📂 **Clone the repository:**
    ```bash
    git clone https://github.com/Subhradeep-Sikder/feedback_pulse.git
    cd feedback-fusion
    ```
 
-2. **Install dependencies**
+2. 📦 **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-   Then fill in the values:
-   - `DATABASE_URL` – PostgreSQL connection string
-   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` – From Clerk dashboard
-   - `CLERK_SECRET_KEY` – From Clerk dashboard
+3. ⚙️ **Configure Environment Variables:**
+   Copy the example environment file: `cp .env.example .env`.
+  
+   
+   Open the `.env` file and fill in your keys:
+   ```env
+   # Database Connection URL
+   DATABASE_URL="postgresql://user:password@localhost:5432/feedback_pulse?schema=public"
 
-4. **Set up the database**
+   # Clerk Authentication
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+   CLERK_SECRET_KEY=sk_test_...
+
+   # Clerk Redirection URLs
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/feedback
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/feedback
+   ```
+    Get your credentials: [Database (Neon DB)](https://neon.tech/) | [Auth Keys (Clerk Dashboard)](https://dashboard.clerk.com/)
+    
+
+4. 🗄️ **Initialize Database and Apply Migrations:**
    ```bash
    npx prisma migrate dev
    ```
-   This creates tables and seeds the database.
 
-5. **Run the dev server**
+5. 🖥️ **Start Development Server:**
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   Open [http://localhost:3000](http://localhost:3000) in your web browser.
 
-## 🔑 Environment Variables
+### 📜 Available Scripts
+* ⚡ `npm run dev` - Runs the application in development mode.
+* 🏗️ `npm run build` - Builds the application for production deployment.
+* 🚀 `npm start` - Launches the production build server.
+* 🔍 `npm run lint` - Runs ESLint to check for code issues.
 
-Create a `.env.local` file with these:
+---
 
-```
-# Database (PostgreSQL)
-DATABASE_URL=postgresql://user:password@localhost:5432/feedback_pulse
-
-# Clerk Authentication
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
-CLERK_SECRET_KEY=your_secret_key
-
-# Clerk URLs (optional - for custom domains)
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/feedback
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/feedback
-```
-
-Get Clerk keys from [https://dashboard.clerk.com](https://dashboard.clerk.com).
-
-## 🗄️ Database Schema
-
-### 👤 User
-- Synced from Clerk with email, name, avatar
-- Role: `user` or `admin`
-
-### 📮 Post (Feedback)
-- Title, description, category
-- Status: `under_review`, `planned`, `in_progress`, `completed`
-- Tracks author and vote count
-
-### ✅ Vote
-- Links users to posts (unique per user/post)
-- Enables upvoting system
-
-## 📜 Scripts
-
-```bash
-npm run dev      # Start dev server
-npm run build    # Build for production
-npm start        # Run production server
-npm run lint     # Run ESLint
-```
-
-## 🎨 Future Improvements
-
-- 📧 Email notifications when feedback status changes
-- 📱 Better mobile responsiveness
-- 🔍 Search and sorting options for feedback
-- 💬 Comments/discussion threads on feedback items
-- 📊 Analytics dashboard for product trends
-- ♿ Accessibility improvements 
-- 🚫 Rate limiting to prevent spam
-
+<p align="center">Buid with ❤️</p>
