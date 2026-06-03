@@ -1,6 +1,5 @@
 # 💡 Feedback Pulse
 
-
 **Feedback Pulse** is a community-driven feedback platform that allows users to submit feature requests, vote on ideas they care about, and track development in real-time. It helps product creators listen to their community, prioritize popular requests, and share progress transparently.
 
 ---
@@ -26,21 +25,11 @@
 
 ## 🛠️ Technologies Used
 
-* 💻 **Framework:** 
-  [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-* 🎨 **Styling & UI:** 
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
-* 🗄️ **Database & ORM:** 
-  [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-  [![Prisma](https://img.shields.io/badge/Prisma-398200?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
-* 🔒 **Authentication:** 
-  [![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)](https://clerk.com/)
-* 🔧 **Utilities:** 
-  [![Lucide Icons](https://img.shields.io/badge/Lucide_React-FF5E00?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
-  [![Sonner](https://img.shields.io/badge/Sonner-00D2C4?style=for-the-badge)](https://github.com/emilkowalski/sonner)
+* 💻 **Framework:** Next.js 16 (App Router), React 19, TypeScript
+* 🎨 **Styling & UI:** Tailwind CSS v4, Shadcn/ui (Radix UI components)
+* 🗄️ **Database & ORM:** PostgreSQL, Prisma ORM
+* 🔒 **Authentication:** Clerk (User sign-in & role assignment)
+* 🔧 **Utilities:** Sonner (notifications), Lucide React (icons), Next Themes (dark mode)
 
 ---
 
@@ -81,7 +70,7 @@ Ensure you have the following installed on your machine:
 
 3. ⚙️ **Configure Environment Variables:**
    Copy the example environment file: `cp .env.example .env`.
-   Get your credentials: [Database (Neon DB)](https://neon.tech/) | [Auth Keys (Clerk Dashboard)](https://dashboard.clerk.com/)
+   
    
    Open the `.env` file and fill in your keys:
    ```env
@@ -98,6 +87,7 @@ Ensure you have the following installed on your machine:
    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/feedback
    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/feedback
    ```
+   Get your credentials: [Database (Neon DB)](https://neon.tech/) | [Auth Keys (Clerk Dashboard)](https://dashboard.clerk.com/)
 
 4. 🗄️ **Initialize Database and Apply Migrations:**
    ```bash
