@@ -118,4 +118,4 @@ Ensure you have the following installed on your machine:
 
 ---
 
-<p align="center">Build by [Subhradeep Sikder](https://github.com/Subhradeep-Sikder)</p>
+<p align="center">Build by Subhradeep Sikder</p>
